@@ -1,8 +1,12 @@
 /* variables */
 :root {
     --black-color: #19161a;
+    --second-black-color: #1a1a1f;
     --white-color: #ffffff;
     --blue-color: #0a0315;
+    --second-blue-color: #242943;
+    --gray-color: #b0aeaa;
+    --second-gray-color: #333c46;
     --background-color: rgba(0, 0, 0, 0.4);
 }
 
@@ -21,7 +25,6 @@ html, body {
 body {
     overflow-x: hidden;
     z-index: 0;
-    background: var(--blue-color);
 }
 
 .wrapper {
@@ -46,7 +49,7 @@ body {
 /* header */
 .header {
     width: 100%;
-    padding: 2rem 5rem;
+    padding: 2rem;
     /* background: yellow; */
     position: fixed;
     top: 0;
@@ -185,14 +188,14 @@ body {
 }
 
 .hamburger-active .hamburger-inner::before {
-    background-color: var(--white-color);
+    background-color: var(--gray-color);
     -webkit-transform: translateY(10px) rotate(45deg);
     -ms-transform: translateY(10px) rotate(45deg);
     transform: translateY(10px) rotate(45deg);
 }
 
 .hamburger-active .hamburger-inner::after {
-    background-color: var(--white-color);
+    background-color: var(--gray-color);
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -ms-transform: translateY(-10px) rotate(-45deg);
     transform: translateY(-10px) rotate(-45deg);
@@ -206,7 +209,7 @@ body {
 
 .hero-wrapper {
     width: 100%;
-    padding: 5rem 1rem;
+    padding: 10rem 1rem;
     color: var(--white-color);
     line-height: 1.5;
     text-align: center;
@@ -223,6 +226,10 @@ body {
 
 /* media queries*/
 @media only screen and (min-width: 1000px) {
+    .header {
+        padding: 2rem 5rem;
+    }
+    
     .hero-wrapper {
         padding: 10rem 0 10rem 5rem;
         color: var(--white-color);
