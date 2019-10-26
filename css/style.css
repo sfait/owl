@@ -291,19 +291,30 @@ body {
 }
 
 /* the-senses */
-.the-senses {
-    background: var(--blue-color);
+.the-senses, .environment {
     display: flex;
-    flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
 }
 
-.the-senses-text {
+.the-senses {
+    background: var(--blue-color);
+    flex-direction: column;
+}
+
+.environment {
+    background: var(--second-gray-color);
+    flex-direction: column-reverse;
+}
+
+.the-senses-text, .environment-text {
     width: 100%;
     padding: 0 2rem;
-    color: var(--white-color);
     text-align: center;
+}
+
+.the-senses-text {
+    color: var(--white-color);
 }
 
 .fourth-header {
@@ -323,14 +334,23 @@ body {
     bottom: -15px;
 }
 
-.the-senses-photo {
+.environment .fourth-header::after {
+    background: var(--black-color);
+}
+
+.the-senses-photo, .environment-photo {
     width: 100%;
     height: auto;
 }
 
-.the-senses-photo img {
+.the-senses-photo img, .environment-photo img {
     width: 100%;
     height: 100%;
+}
+
+/* environment */
+.environment-list {
+    padding-left: 1rem;
 }
 
 /* media queries*/
@@ -355,12 +375,12 @@ body {
         width: 40%;
     }
 
-    .the-senses {
+    .the-senses, .environment {
         flex-direction: row;
         justify-content: center;
     }
 
-    .the-senses-text {
+    .the-senses-text, .environment-text {
         width: 60%;
         padding: 0 3rem;
         text-align: left;
@@ -370,7 +390,7 @@ body {
         margin-left: 0;
     }
 
-    .the-senses-photo {
+    .the-senses-photo, .environment-photo {
         width: 40%;
         height: 100vh;
     }
