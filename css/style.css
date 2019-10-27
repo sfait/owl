@@ -1,10 +1,8 @@
 /* variables */
 :root {
     --black-color: #19161a;
-    --second-black-color: #1a1a1f;
     --white-color: #ffffff;
     --blue-color: #0a0315;
-    --second-blue-color: #242943;
     --gray-color: #b0aeaa;
     --second-gray-color: #f2f2f2;
     --background-color: rgba(0, 0, 0, 0.4);
@@ -12,6 +10,7 @@
 
 /* general */
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -54,16 +53,22 @@ body {
     /* background: yellow; */
     position: fixed;
     top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     z-index: 2;
 }
 
- .scrolled {
-     padding: 1rem;
-     background: var(--blue-color);
- }
+.scrolled {
+    padding: 1rem;
+    background: var(--blue-color);
+}
 
 .main-header {
     margin: 0;
@@ -76,14 +81,22 @@ body {
     height: 100vh;
     width: 100%;
     background-color: var(--blue-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     position: absolute;
     top: 0;
     left: 0;
     padding-top: 1rem;
     visibility: hidden;
+    -webkit-transform: translateX(100%);
+    -ms-transform: translateX(100%);
     transform: translateX(100%);
 }
 
@@ -104,9 +117,18 @@ body {
     padding: 0;
     text-align: center;
     list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -119,6 +141,8 @@ body {
     width: 100%;
     color: var(--white-color);
     text-decoration: none;
+    -webkit-transition: color 0.3s, background 0.3s;
+    -o-transition: color 0.3s, background 0.3s;
     transition: color 0.3s, background 0.3s;
 }
 
@@ -221,9 +245,18 @@ body {
     line-height: 1.5;
     text-align: center;
     background: var(--background-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -251,8 +284,14 @@ body {
 .description {
     padding: 5rem 0;
     background: var(--second-gray-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -297,18 +336,30 @@ body {
 
 /* the-senses */
 .the-senses, .environment, .food {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
 }
 
 .the-senses, .food {
     background: var(--blue-color);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .environment {
     background: var(--second-gray-color);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
 }
 
@@ -352,7 +403,11 @@ body {
 .the-senses-photo img, .environment-photo img, .food-photo img {
     width: 100%;
     height: 100%;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 /* environment */
@@ -369,9 +424,16 @@ body {
 
 .photo-boxes {
     padding: 2rem 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -442,10 +504,16 @@ body {
 .box img {
     width: 100%;
     height: 100%;
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    -o-transition: transform 0.3s;
     transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .the-senses-photo img:hover, .environment-photo img:hover, .food-photo img:hover, .box img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
     transform: scale(1.2);
 }
 
@@ -457,9 +525,18 @@ body {
 .footer-wrapper {
     padding: 5rem 0 1rem;
     color: var(--gray-color);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -472,6 +549,8 @@ body {
     font-size: 2.5rem;
     margin: 0 1rem;
     text-decoration: none;
+    -webkit-transition: color 0.3s;
+    -o-transition: color 0.3s;
     transition: color 0.3s;
 }
 
@@ -489,7 +568,11 @@ body {
         padding: 10rem 0 10rem 5rem;
         color: var(--white-color);
         text-align: left;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: flex-start;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
     }
 
@@ -502,7 +585,12 @@ body {
     }
 
     .the-senses, .environment, .food {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
