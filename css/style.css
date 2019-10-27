@@ -50,7 +50,6 @@ body {
 .header {
     width: 100%;
     padding: 2rem;
-    /* background: yellow; */
     position: fixed;
     top: 0;
     display: -webkit-box;
@@ -74,7 +73,11 @@ body {
     margin: 0;
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+.main-header a {
     color: var(--white-color);
+    text-decoration: none;
 }
 
 .navigation {
